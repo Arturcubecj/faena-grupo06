@@ -106,4 +106,9 @@
     <string name="rol_eliezer">Menú de opciones: Borrar datos</string>
     <string name="rol_arturo">SharedPreferences: Memoria externa</string>
     <string name="btn_regresar">Regresar</string>
+    <!-- ===== Menú (Eliezer) ===== -->
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="menu_registrar">Registrar usuario</string>
+    <string name="menu_ver_registros">Ver registros</string>
+    <string name="menu_borrar_datos">Borrar datos</string>
 </resources>
