@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_tarjeta"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        style="@style/TituloModal"
+        android:text="@string/titulo_registros" />
+
+    <!-- Ruta del archivo, para evidenciar dónde se guarda -->
+    <TextView
+        android:id="@+id/tvRutaArchivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textColor="@color/color_texto_oscuro"
+        android:textSize="11sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="12dp">
+
+        <TextView
+            android:id="@+id/tvRegistros"
+            style="@style/TextoModal"
+            android:lineSpacingExtra="4dp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCerrarRegistros"
+        style="@style/BotonFAENA"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_cerrar" />
+</LinearLayout>

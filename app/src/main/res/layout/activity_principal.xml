@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrincipalActivity">
+
+    <!-- Mismo fondo del Login -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/desc_fondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_login" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_capa_oscura" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:contentDescription="@string/desc_img_login"
+            android:src="@drawable/img_login" />
+
+        <TextView
+            android:id="@+id/tvBienvenida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/titulo_principal"
+            android:textColor="@color/color_texto_claro"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitulo_principal"
+            android:textColor="@color/color_secundario"
+            android:textSize="14sp" />
+
+        <!-- Tarjeta con los datos de la sesión -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_tarjeta"
+            android:elevation="6dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvUsuarioGuardado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_texto_oscuro"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEstadoSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/color_texto_oscuro"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnBorrarDatos"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_boton"
+                android:text="@string/btn_borrar_datos"
+                android:textAllCaps="false"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+    
+    <!-- Barra superior: aquí aparece el menú (⋮) -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="top"
+        android:background="@color/color_primario"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.FAENA.Toolbar"
+        app:popupTheme="@style/ThemeOverlay.Material3.Light"
+        app:title="@string/app_titulo"
+        app:titleTextColor="@color/white" />
+        
+</FrameLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tarjeta"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/TituloModal"
+            android:text="@string/titulo_acerca_de" />
+
+        <!-- Foto del grupo tomada en Zoom -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/desc_foto_grupo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_login" /> <!-- cambiar a: @drawable/foto_grupo -->
+
+        <TextView
+            style="@style/TextoModal"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/acerca_proyecto"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TextoModal"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/acerca_institucion"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/TextoModal"
+            android:gravity="center"
+            android:text="@string/acerca_materia"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/TituloModal"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:text="@string/lbl_integrantes"
+            android:textSize="16sp" />
+
+        <!-- Integrante 1 -->
+        <TextView
+            style="@style/TextoModal"
+            android:layout_marginTop="8dp"
+            android:text="@string/integrante_1"
+            android:textStyle="bold" />
+        <TextView
+            style="@style/TextoModal"
+            android:text="@string/rol_dhamaris"
+            android:textSize="12sp" />
+
+        <!-- Integrante 2 -->
+        <TextView
+            style="@style/TextoModal"
+            android:layout_marginTop="8dp"
+            android:text="@string/integrante_2"
+            android:textStyle="bold" />
+        <TextView
+            style="@style/TextoModal"
+            android:text="@string/rol_anderson"
+            android:textSize="12sp" />
+
+        <!-- Integrante 3 -->
+        <TextView
+            style="@style/TextoModal"
+            android:layout_marginTop="8dp"
+            android:text="@string/integrante_3"
+            android:textStyle="bold" />
+        <TextView
+            style="@style/TextoModal"
+            android:text="@string/rol_eliezer"
+            android:textSize="12sp" />
+
+        <!-- Integrante 4 -->
+        <TextView
+            style="@style/TextoModal"
+            android:layout_marginTop="8dp"
+            android:text="@string/integrante_4"
+            android:textStyle="bold" />
+        <TextView
+            style="@style/TextoModal"
+            android:text="@string/rol_arturo"
+            android:textSize="12sp" />
+
+        <!-- Botón para regresar a la pantalla que lo abrió -->
+        <Button
+            android:id="@+id/btnRegresar"
+            style="@style/BotonFAENA"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_regresar" />
+    </LinearLayout>
+</ScrollView>

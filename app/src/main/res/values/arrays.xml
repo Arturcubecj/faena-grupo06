@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- La primera opción es un aviso -->
+    <string-array name="nacionalidades">
+        <item>Seleccione…</item>
+        <item>Ecuatoriana</item>
+        <item>Colombiana</item>
+        <item>Peruana</item>
+        <item>Venezolana</item>
+        <item>Argentina</item>
+        <item>Chilena</item>
+        <item>Mexicana</item>
+        <item>Estadounidense</item>
+        <item>Española</item>
+        <item>Otra</item>
+    </string-array>
+
+    <string-array name="generos">
+        <item>Seleccione…</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+        <item>Prefiero no decirlo</item>
+    </string-array>
+</resources>

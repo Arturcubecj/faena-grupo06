@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+    <!-- Mismo fondo del Login para mantener el estilo -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/desc_fondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_login" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_capa_oscura" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- TÍTULO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/titulo_registro"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/subtitulo_registro"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="14sp" />
+
+            <!-- TARJETA DEL FORMULARIO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tarjeta"
+                android:elevation="6dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Cédula (solo números) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCedula"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_cedula"
+                    app:boxStrokeColor="@color/color_primario"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    app:hintTextColor="@color/color_primario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCedula"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Nombres (solo texto) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNombres"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/hint_nombres"
+                    app:boxStrokeColor="@color/color_primario"
+                    app:hintTextColor="@color/color_primario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Apellidos (solo texto) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilApellidos"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/hint_apellidos"
+                    app:boxStrokeColor="@color/color_primario"
+                    app:hintTextColor="@color/color_primario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etApellidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Edad (solo números) -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEdad"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/hint_edad"
+                    app:boxStrokeColor="@color/color_primario"
+                    app:hintTextColor="@color/color_primario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEdad"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Nacionalidad (SPINNER) -->
+                <TextView
+                    style="@style/EtiquetaRegistro"
+                    android:id="@+id/lblNacionalidad"
+                    android:text="@string/lbl_nacionalidad" />
+
+                <Spinner
+                    android:id="@+id/spNacionalidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:entries="@array/nacionalidades"
+                    android:spinnerMode="dropdown" />
+
+                <!-- Mensaje de error (rojo), oculto hasta que haya un error -->
+                <TextView
+                    android:id="@+id/tvErrNacionalidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/color_error"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <!-- Género (SPINNER) -->
+                <TextView
+                    style="@style/EtiquetaRegistro"
+                    android:id="@+id/lblGenero"
+                    android:text="@string/lbl_genero" />
+
+                <Spinner
+                    android:id="@+id/spGenero"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:entries="@array/generos"
+                    android:spinnerMode="dropdown" />
+
+                <!-- Mensaje de error (rojo), oculto hasta que haya un error -->
+                <TextView
+                    android:id="@+id/tvErrGenero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/color_error"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <!-- Estado civil (RADIO BUTTON) -->
+                <TextView
+                    style="@style/EtiquetaRegistro"
+                    android:id="@+id/lblEstadoCivil"
+                    android:text="@string/lbl_estado_civil" />
+
+                <RadioGroup
+                    android:id="@+id/rgEstadoCivil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbSoltero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rb_soltero"
+                        android:textColor="@color/color_texto_oscuro"
+                        app:buttonTint="@color/color_primario" />
+
+                    <RadioButton
+                        android:id="@+id/rbCasado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rb_casado"
+                        android:textColor="@color/color_texto_oscuro"
+                        app:buttonTint="@color/color_primario" />
+
+                    <RadioButton
+                        android:id="@+id/rbDivorciado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rb_divorciado"
+                        android:textColor="@color/color_texto_oscuro"
+                        app:buttonTint="@color/color_primario" />
+
+                    <RadioButton
+                        android:id="@+id/rbViudo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rb_viudo"
+                        android:textColor="@color/color_texto_oscuro"
+                        app:buttonTint="@color/color_primario" />
+
+                    <RadioButton
+                        android:id="@+id/rbUnionHecho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rb_union_hecho"
+                        android:textColor="@color/color_texto_oscuro"
+                        app:buttonTint="@color/color_primario" />
+                </RadioGroup>
+
+                <!-- Mensaje de error (rojo), oculto hasta que haya un error -->
+                <TextView
+                    android:id="@+id/tvErrEstadoCivil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/color_error"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <!-- Fecha de nacimiento -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFechaNac"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_fecha_nac"
+                    app:boxStrokeColor="@color/color_primario"
+                    app:hintTextColor="@color/color_primario"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
+
+                    <!-- No se escribe: al tocarlo se abre el calendario -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFechaNac"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Nivel de inglés -->
+                <TextView
+                    style="@style/EtiquetaRegistro"
+                    android:id="@+id/lblNivelIngles"
+                    android:text="@string/lbl_nivel_ingles" />
+
+                <!-- wrap_content es obligatorio para que se vean exactamente 5 estrellas -->
+                <RatingBar
+                    android:id="@+id/rbIngles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="5"
+                    android:progressTint="@color/color_secundario"
+                    android:rating="0"
+                    android:stepSize="1" />
+
+                <!-- Mensaje de error (rojo), oculto hasta que haya un error -->
+                <TextView
+                    android:id="@+id/tvErrIngles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/color_error"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <!-- BOTONES -->
+                <Button
+                    android:id="@+id/btnRegistrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_boton"
+                    android:text="@string/btn_registrar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_texto_claro"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnBorrar"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_boton_secundario"
+                        android:text="@string/btn_borrar"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_primario"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null" />
+
+                    <Button
+                        android:id="@+id/btnCancelar"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_boton_secundario"
+                        android:text="@string/btn_cancelar"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_primario"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null" />
+                </LinearLayout>
+
+                <!-- Recupera los datos del archivo y los muestra en una ventana modal -->
+                <Button
+                    android:id="@+id/btnVerRegistros"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_boton_secundario"
+                    android:text="@string/btn_ver_registros"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_primario"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

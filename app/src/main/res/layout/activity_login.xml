@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- FONDO DE PANTALLA TIPO IMAGEN  >>> INTEGRANTE 3 <<< -->
+    <ImageView
+        android:id="@+id/ivFondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/desc_fondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_login" />
+
+    <!-- Capa oscura para que el texto se lea sobre la foto -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_capa_oscura" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- ===== CABECERA: DATOS DEL GRUPO ===== -->
+            <TextView
+                android:id="@+id/tvUniversidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/universidad"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/facultad"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvMateria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="@string/materia"
+                android:textColor="@color/color_secundario"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/datos_grupo"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvGrupo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/num_grupo"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvIntegrante1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/integrante_1"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvIntegrante2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/integrante_2"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvIntegrante3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/integrante_3"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvIntegrante4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/integrante_4"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="12sp" />
+
+            <!-- ===== TÍTULO DE LA PROPUESTA DE PROYECTO ===== -->
+            <TextView
+                android:id="@+id/tvTituloProyecto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="@string/titulo_propuesta"
+                android:textColor="@color/color_texto_claro"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- IMAGEN RELACIONADA AL LOGIN  >>> INTEGRANTE 3 <<< -->
+            <ImageView
+                android:id="@+id/ivLogin"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/desc_img_login"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_login" />
+
+            <!-- ===== TARJETA DEL FORMULARIO ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_tarjeta"
+                android:elevation="6dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/subtitulo_login"
+                    android:textColor="@color/color_texto_oscuro"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Usuario -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUsuario"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_usuario"
+                    app:boxStrokeColor="@color/color_primario"
+                    app:hintTextColor="@color/color_primario"
+                    app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                    app:startIconTint="@color/color_primario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Contraseña -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilClave"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/hint_password"
+                    app:boxStrokeColor="@color/color_primario"
+                    app:endIconMode="password_toggle"
+                    app:hintTextColor="@color/color_primario"
+                    app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+                    app:startIconTint="@color/color_primario">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etClave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Mantener sesión: si está marcado se guarda en el SharedPreference -->
+                <CheckBox
+                    android:id="@+id/cbMantenerSesion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/cb_mantener_sesion"
+                    android:textColor="@color/color_texto_oscuro"
+                    app:buttonTint="@color/color_primario" />
+
+                <!-- Botón Iniciar Sesión -->
+                <Button
+                    android:id="@+id/btnIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_boton"
+                    android:text="@string/btn_iniciar_sesion"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_texto_claro"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+                <!-- Botón Crear cuenta: abre la pantalla de registro -->
+                <Button
+                    android:id="@+id/btnCrearCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_boton_secundario"
+                    android:text="@string/btn_crear_cuenta"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_primario"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

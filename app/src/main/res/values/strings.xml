@@ -1,0 +1,109 @@
+<resources>
+    <!-- ===== Menú ===== -->
+    <string name="app_titulo">FAENA</string>
+    
+    <string name="app_name">Tarea 2</string>
+
+    <!--Cabecera: datos del grupo-->
+    <string name="universidad">Universidad de Guayaquil</string>
+    <string name="facultad">Facultad de Ciencias Matemáticas y Físicas</string>
+    <string name="materia">Desarrollo de Aplicaciones Móviles</string>
+    <string name="datos_grupo">Datos del grupo</string>
+    <string name="num_grupo">Grupo: 06</string>
+    <string name="integrante_1">Calero Gaona Dhamaris Ieleen</string>
+    <string name="integrante_2">Espinosa Feijoo Anderson Antanas</string>
+    <string name="integrante_3">Valverde Cardenas Eliezer Abdias</string>
+    <string name="integrante_4">Vásquez Cubero Arturo José</string>
+
+    <!--Titulo de la propuesta-->
+    <string name="titulo_propuesta">FAENA: Aplicación Móvil para una Pesca Artesanal Segura y Sostenible</string>
+
+    <!--Formulario de login-->
+    <string name="subtitulo_login">Inicia sesión para continuar</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_iniciar_sesion">Iniciar Sesión</string>
+    <string name="desc_img_login">Imagen de inicio de sesión</string>
+    <string name="desc_fondo">Fondo de pantalla</string>
+
+    <!--Mensajes toast-->
+    <string name="msg_acceso">Acceso Concedido</string>
+    <string name="msg_datos_inco">Datos incorrectos</string>
+
+    <!--Mensajes de validación de campos vacíos-->
+    <string name="error_usuario_vacio">Ingrese el usuario</string>
+    <string name="error_password_vacio">Ingrese la contraseña</string>
+
+    <!-- Login: botón crear nuevo -->
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+    
+    <!-- Pantalla de registro -->
+    <string name="titulo_registro">Crear cuenta</string>
+    <string name="subtitulo_registro">Completa tus datos personales</string>
+    
+    <string name="hint_cedula">Cédula</string>
+    <string name="hint_nombres">Nombres</string>
+    <string name="hint_apellidos">Apellidos</string>
+    <string name="hint_edad">Edad</string>
+    <string name="hint_fecha_nac">Fecha de nacimiento</string>
+
+    <string name="lbl_nacionalidad">Nacionalidad</string>
+    <string name="lbl_genero">Género</string>
+    <string name="lbl_estado_civil">Estado civil</string>
+    <string name="lbl_nivel_ingles">Nivel de inglés</string>
+
+    <string name="rb_soltero">Soltero/a</string>
+    <string name="rb_casado">Casado/a</string>
+    <string name="rb_divorciado">Divorciado/a</string>
+    <string name="rb_viudo">Viudo/a</string>
+    <string name="rb_union_hecho">Unión de hecho</string>
+
+    <string name="btn_registrar">Registrar</string>
+    <string name="btn_borrar">Borrar</string>
+    <string name="btn_cancelar">Cancelar</string>
+
+    <!-- Mensajes del registro -->
+    <string name="msg_registro_ok">Datos ingresados correctamente</string>
+    <string name="msg_formulario_borrado">Formulario borrado</string>
+    <string name="msg_revise_campos">Revise los campos marcados</string>
+    <string name="error_campo_obligatorio">Campo obligatorio</string>
+    <string name="error_cedula">La cédula debe tener 10 dígitos</string>
+    <string name="error_edad">Ingrese una edad válida (1 a 120)</string>
+    <string name="error_seleccione_nacionalidad">Seleccione una nacionalidad</string>
+    <string name="error_seleccione_genero">Seleccione un género</string>
+    <string name="error_seleccione_estado_civil">Seleccione un estado civil</string>
+    <string name="error_seleccione_nivel_ingles">Califique su nivel de inglés</string>
+
+    <!-- Tarea 3: mantener sesión -->
+    <string name="cb_mantener_sesion">Mantener sesión iniciada</string>
+
+    <string name="titulo_principal">Bienvenido a FAENA</string>
+    <string name="subtitulo_principal">Pantalla principal</string>
+    <string name="lbl_usuario_guardado">Usuario guardado: %1$s</string>
+    <string name="lbl_sin_datos">No hay datos de sesión guardados</string>
+    <string name="estado_sesion_guardada">Sesión activa: la próxima vez entrarás directo aquí.</string>
+    <string name="estado_sesion_no_guardada">Sesión no guardada: la próxima vez se pedirá el login.</string>
+    <string name="btn_borrar_datos">Borrar datos</string>
+    <string name="msg_datos_borrados">Datos de sesión eliminados</string>
+
+    <!-- ===== Memoria externa ===== -->
+    <string name="btn_ver_registros">Ver registros</string>
+    <string name="titulo_registros">Registros guardados</string>
+    <string name="msg_sin_registros">Todavía no hay registros guardados en el archivo.</string>
+    <string name="msg_guardado_archivo">Datos guardados en el archivo</string>
+    <string name="msg_error_archivo">No se pudo guardar en el archivo</string>
+    <string name="btn_cerrar">Cerrar</string>
+
+    <!-- ===== Acerca de ===== -->
+    <string name="titulo_acerca_de">Acerca de FAENA</string>
+    <string name="desc_foto_grupo">Foto del Grupo 06 en Zoom</string>
+    <string name="acerca_proyecto">FAENA: Aplicación Móvil para una Pesca Artesanal Segura y Sostenible</string>
+    <string name="acerca_institucion">Universidad de Guayaquil - Facultad de Ciencias Matemáticas y Físicas - Ingeniería de Software</string>
+    <string name="acerca_materia">Desarrollo de Aplicaciones Móviles: Grupo 06</string>
+    <string name="lbl_integrantes">Integrantes</string>
+    <string name="rol_dhamaris">Ventana Acerca de: CheckBox de sesión y modal de registros</string>
+    <string name="rol_anderson">Pantalla principal: Toolbar y estilos</string>
+    <string name="rol_eliezer">Menú de opciones: Borrar datos</string>
+    <string name="rol_arturo">SharedPreferences: Memoria externa</string>
+    <string name="btn_regresar">Regresar</string>
+</resources>

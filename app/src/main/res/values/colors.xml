@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Paleta FAENA: mar profundo + amanecer (Integrante 3) -->
+    <color name="color_primario">#0E7C86</color><!-- turquesa mar: botón, bordes e íconos de campos -->
+    <color name="color_secundario">#FFA94D</color><!-- naranja amanecer: texto de la materia -->
+    <color name="color_texto_claro">#FFFFFF</color><!-- textos sobre el fondo -->
+    <color name="color_texto_oscuro">#0B2545</color><!-- azul marino: textos dentro de la tarjeta -->
+    <color name="color_fondo_tarjeta">#F2FFFFFF</color><!-- tarjeta (blanco 95 %) -->
+    <color name="color_capa_oscura">#4D071A33</color><!-- velo azul marino 30 % sobre la foto de fondo -->
+
+    <color name="color_acento">#FF8C42</color>          <!-- naranja salvavidas: acento -->
+
+    <color name="color_error">#D32F2F</color>           <!-- rojo: campos con error -->
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
